@@ -6,10 +6,10 @@ Repository ini berisi tugas Praktikum 1 Pemrograman Berbasis Objek 2.
 ## Hasil Eksekusi Program
 
 ### 1. Program HaloPBO2
-![Hasil HaloPBO2](output_HaloPBO2.jpeg)
+![Hasil HaloPBO2](HaloPBO2.jpeg)
 
 ### 2. Program KartuMahasiswa
-![Hasil KartuMahasiswa](output_KartuMahasiswa.jpeg)
+![Hasil KartuMahasiswa](KartuMahasiswa.jpeg)
 
 ## Riwayat Commit Git
-![Git Log](output_git log --oneline.jpeg)
+![Git Log](git%20log%20--oneline.jpeg)
