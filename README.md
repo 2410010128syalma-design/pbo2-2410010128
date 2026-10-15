@@ -13,3 +13,18 @@ Repository ini berisi tugas Praktikum 1 Pemrograman Berbasis Objek 2.
 
 ## Riwayat Commit Git
 ![Git Log](git%20log%20--oneline.jpeg)
+
+## Dokumentasi Praktikum 2 - PBO2
+
+### 1. Tab Design
+![Tab Design](Tab_Design.png)
+
+### 2. Tema Gelap
+![Tema Gelap](Tema_Gelap.png)
+
+### 3. Tema Terang
+![Tema Terang](Tema_Terang.png)
+
+### 4. Jawaban Pertanyaan Refleksi
+File jawaban refleksi dapat dilihat pada [Jawaban_Pertanyaan_Refleksi.docx](Jawaban_Pertanyaan_Refleksi.docx).
+
