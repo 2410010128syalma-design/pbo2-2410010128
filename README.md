@@ -151,19 +151,18 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 ## Punya saya dinilai oleh Naura Aulia Jahirah
 ## CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
 
-+----+--------------------------------------------------------------+------------------+
-| No | Pemeriksaan                                                  | Ya atau Belum    |
-+----+--------------------------------------------------------------+------------------+
-| 1  | Label singkat, jelas, dan sejajar                            | Ya               |
-| 2  | Isian dikelompokkan dengan judul bagian                      | Ya               |
-| 3  | Placeholder dipakai untuk isian yang punya format            | Ya               |
-| 4  | Komponen sesuai jenis data                                   | Ya               |
-| 5  | Tombol utama menonjol dan berada di kanan bawah              | Ya               |
-| 6  | Jarak antar komponen konsisten                               | Ya               |
-| 7  | Form tetap rapi saat jendela dilebarkan dan ditinggikan      | Ya  	       |
-| 8  | Menggunakan JFrame Form dan layout manager, bukan Null atau  | Ya               |
-|    | Absolute Layout                                              | Ya               |
-+----+--------------------------------------------------------------+------------------+
+### CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
+
+| No | Pemeriksaan | Ya atau Belum |
+| :---: | :--- | :---: |
+| 1 | Label singkat, jelas, dan sejajar | Ya |
+| 2 | Isian dikelompokkan dengan judul bagian | Ya |
+| 3 | Placeholder dipakai untuk isian yang punya format | Ya |
+| 4 | Komponen sesuai jenis data | Ya |
+| 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
+| 6 | Jarak antar komponen konsisten | Ya |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Ya |
+| 8 | Menggunakan JFrame Form dan layout manager, bukan Null atau Absolute Layout | Ya |
 
 ### Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
 
