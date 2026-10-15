@@ -87,14 +87,14 @@ Agar susunan form lebih teratur dan mudah diatur. Dengan isiPanel sebagai pembun
 
 Komponen yang berhubungan diletakkan berdekatan. Contohnya, NPM, nama lengkap, dan program studi dikelompokkan pada bagian Data Anggota, sedangkan email, nomor HP, dan alamat berada pada bagian Kontak.
 # Bukti a
-![Bukti](Bukti a.png)
+![Hasil Bukti](Bukti.png)
 
 
 **b. Konsistensi dan kerapian**
 
 Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilihan Mahasiswa, Dosen, dan Umum disusun berdekatan, sedangkan tombol Batal dan Daftar ditempatkan di bagian bawah sebelah kanan.
 # Bukti b
-![Bukti](Bukti b.png)
+![Hasil Bukti](Bukti.png)
 
 # Foto Sketsa
 ![Hasil Sketsa](Sketsa.png)
