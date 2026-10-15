@@ -147,7 +147,7 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 
 ## Jawaban Tahap 4 Saling Menilai
 ## Punya saya dinilai oleh Naura Aulia Jahirah
-## CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
+
 
 ### CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
 
