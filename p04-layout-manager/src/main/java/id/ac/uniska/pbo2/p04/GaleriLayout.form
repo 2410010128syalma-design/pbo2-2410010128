@@ -122,7 +122,11 @@
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout">
+            <Property name="alignment" type="int" value="0"/>
+            <Property name="horizontalGap" type="int" value="8"/>
+            <Property name="verticalGap" type="int" value="8"/>
+          </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="baruButton">
               <Properties>
@@ -184,47 +188,47 @@
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton13">
+            <Component class="javax.swing.JButton" name="tombol1Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton14">
+            <Component class="javax.swing.JButton" name="tombol2Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="2"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton15">
+            <Component class="javax.swing.JButton" name="tombol3Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton16">
+            <Component class="javax.swing.JButton" name="tombol4Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="4"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton17">
+            <Component class="javax.swing.JButton" name="tombol5Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="5"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton18">
+            <Component class="javax.swing.JButton" name="tombol6Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="6"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton19">
+            <Component class="javax.swing.JButton" name="tombol7Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="7"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton20">
+            <Component class="javax.swing.JButton" name="tombol8Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="8"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton21">
+            <Component class="javax.swing.JButton" name="tombol9Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
@@ -251,7 +255,7 @@
             <Property name="axis" type="int" value="1"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton22">
+            <Component class="javax.swing.JButton" name="dashboarButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dashboard"/>
               </Properties>
@@ -272,7 +276,7 @@
                 <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton23">
+            <Component class="javax.swing.JButton" name="mahasiswaButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Data Mahasiswa"/>
               </Properties>
@@ -293,7 +297,7 @@
                 <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton24">
+            <Component class="javax.swing.JButton" name="mataKuliahButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Data Mata Kuliah"/>
               </Properties>
@@ -314,7 +318,7 @@
                 <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton25">
+            <Component class="javax.swing.JButton" name="laporanButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Laporan"/>
               </Properties>
@@ -363,17 +367,17 @@
                 <Property name="axis" type="int" value="1"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton26">
+                <Component class="javax.swing.JButton" name="seninButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Senin"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton27">
+                <Component class="javax.swing.JButton" name="selasaButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Selasa"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton28">
+                <Component class="javax.swing.JButton" name="rabuButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Rabu"/>
                   </Properties>
@@ -395,12 +399,12 @@
                 <Property name="horizontalGap" type="int" value="8"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton29">
+                <Component class="javax.swing.JButton" name="hapusButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton30">
+                <Component class="javax.swing.JButton" name="simpannButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
