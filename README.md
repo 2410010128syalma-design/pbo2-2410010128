@@ -56,8 +56,8 @@ Alasannya: Bikin data kacau. Kalau diubah paksa, sistem akan mengira buku itu "T
 ## 5.Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat? 
 Jawab :
 ## 1.Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
-Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
-Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
+## Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
+## Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
 ## 2.Karena JRadioButton digunakan untuk memilih satu pilihan saja dari beberapa pilihan. Dengan memberikan buttonGroup yang sama, ketika satu pilihan dipilih, pilihan lainnya otomatis tidak terpilih. 
 ## 3.Saya akan memilih JComboBox ketika pilihan yang tersedia cukup banyak, sehingga lebih menghemat tempat pada form. Sedangkan JRadioButton lebih cocok jika pilihannya sedikit dan ingin semua pilihan langsung terlihat.
 ## 4.Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pada tab Design. Kode tersebut dapat dibuat ulang atau berubah ketika form diedit, sehingga tidak boleh diubah langsung. Kode tambahan seharusnya ditulis di luar blok initComponents(), misalnya di konstruktor setelah initComponents(), pada event handler, atau pada method bantu.
