@@ -159,4 +159,32 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 
 ### Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
 
+# Praktikum 5 - PBO 2
+## Tabel Pengamatan Praktikum 2
+| No. | Tindakan | Event yang Tercatat |
+|---|---|---|
+| 1 | Arahkan kursor ke tombol, lalu jauhkan. | MouseEvent |
+| 2 | Klik tombol "Klik saya". | ActionEvent |
+| 3 | Centang lalu hapus centang "Aktifkan fitur". | ItemEvent |
+| 4 | Ganti pilihan dari Pagi menjadi Malam. | ItemEvent |
+| 5 | Klik isian, lalu ketik kata "abc". | KeyEvent |
+| 6 | Klik tombol setelah mengetik di isian. | FocusEvent |
+
+## Jawaban Eksperimen Praktikum 3
+### Eksperimen:
+### 1. Hapus pemeriksaan if (evt.getStateChange() == ItemEvent.SELECTED) dan tambahkan System.out.println("item berubah"); di dalam event handler. Berapa kali pesan tercetak setiap pilihan diganti?
+(Pesan tercetak 2 kali setiap pilihan di combo box diganti. Ini karena itemStateChanged dipanggil dua kali: sekali untuk pilihan lama yang berubah jadi DESELECTED, dan sekali lagi untuk pilihan baru yang jadi SELECTED. Makanya di kode asli ada if (evt.getStateChange() == ItemEvent.SELECTED) supaya aksinya cuma jalan sekali.)
+
+### 2. Di jendela Properties bagian Events, kosongkan event keyReleased pada celsiusField, lalu buat event keyPressed yang memanggil konversi(). Mengapa hasil yang tampil terlambat satu karakter?
+(Hasilnya terlambat satu karakter karena keyPressed dipicu saat tombol baru ditekan, padahal saat itu karakternya belum masuk ke isian. Jadi getText() di konversi() masih membaca isi yang lama.)
+
+### 3. Hapus blok try dan catch di method konversi, lalu ketik huruf pada isian. Apa yang muncul di jendela Output?
+(Karena Double.parseDouble("abc") gagal, program melempar NumberFormatException dan pesan error (stack trace) muncul di jendela Output, misalnya: Exception in thread "AWT-EventQueue-0" java.lang.NumberFormatException: For input string: "abc"
+Selain itu, label hasil nggak diperbarui dan nggak ada pesan “Masukkan angka yang valid” untuk pengguna. Aplikasinya biasanya tetap jalan, tapi tampilannya jadi nggak informatif. Ini menunjukkan fungsi try-catch buat validasi input dan memberi umpan balik yang jelas ke pengguna.)
+
+## Jawaban Eksperimen Praktikum 4
+
+## Peta Event pada FormAnggotaPerpustakaan
+
+
 
