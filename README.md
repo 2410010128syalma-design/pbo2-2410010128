@@ -1,8 +1,6 @@
 # pbo2-2410010128
+Repository ini berisi tugas Praktikum Pemrograman Berbasis Objek 2.
 # Praktikum 1 - PBO 2
-
-Repository ini berisi tugas Praktikum 1 Pemrograman Berbasis Objek 2.
-
 ## Hasil Eksekusi Program
 
 ### 1. Program HaloPBO2
@@ -50,18 +48,17 @@ Alasannya: Bikin data kacau. Kalau diubah paksa, sistem akan mengira buku itu "T
 
 ## Jawaban Refleksi
 ## 1.Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing satu contoh.
+Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
+Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
+Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
 ## 2.Mengapa kedua JRadioButton perlu diberi properti buttonGroup yang sama?
+Karena JRadioButton digunakan untuk memilih satu pilihan saja dari beberapa pilihan. Dengan memberikan buttonGroup yang sama, ketika satu pilihan dipilih, pilihan lainnya otomatis tidak terpilih. 
 ## 3.Kapan Anda memilih JComboBox dibandingkan JRadioButton?
+Saya akan memilih JComboBox ketika pilihan yang tersedia cukup banyak, sehingga lebih menghemat tempat pada form. Sedangkan JRadioButton lebih cocok jika pilihannya sedikit dan ingin semua pilihan langsung terlihat.
 ## 4.Mengapa kode di dalam initComponents() tidak boleh diedit langsung, dan di mana kode tambahan seharusnya ditulis?
+Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pada tab Design. Kode tersebut dapat dibuat ulang atau berubah ketika form diedit, sehingga tidak boleh diubah langsung. Kode tambahan seharusnya ditulis di luar blok initComponents(), misalnya di konstruktor setelah initComponents(), pada event handler, atau pada method bantu.
 ## 5.Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat? 
-Jawab :
-## 1.Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
-## Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
-## Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
-## 2.Karena JRadioButton digunakan untuk memilih satu pilihan saja dari beberapa pilihan. Dengan memberikan buttonGroup yang sama, ketika satu pilihan dipilih, pilihan lainnya otomatis tidak terpilih. 
-## 3.Saya akan memilih JComboBox ketika pilihan yang tersedia cukup banyak, sehingga lebih menghemat tempat pada form. Sedangkan JRadioButton lebih cocok jika pilihannya sedikit dan ingin semua pilihan langsung terlihat.
-## 4.Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pada tab Design. Kode tersebut dapat dibuat ulang atau berubah ketika form diedit, sehingga tidak boleh diubah langsung. Kode tambahan seharusnya ditulis di luar blok initComponents(), misalnya di konstruktor setelah initComponents(), pada event handler, atau pada method bantu.
-## 5.Karena FlatLightLaf.setup() digunakan untuk mengaktifkan tema tampilan FlatLaf. Perintah ini dipanggil terlebih dahulu sebelum membuat form, agar form yang dibuat langsung menggunakan tampilan FlatLaf. 
+Karena FlatLightLaf.setup() digunakan untuk mengaktifkan tema tampilan FlatLaf. Perintah ini dipanggil terlebih dahulu sebelum membuat form, agar form yang dibuat langsung menggunakan tampilan FlatLaf. 
 
 # Praktikum 4 - PBO 2
 # Jawaban pertanyaan refleksi pada bagian G
@@ -118,6 +115,7 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 ## Form Ukuran Lebar
 ![Hasil Lebar](Ukuran_lebar.png)
 
+
 ##Tab Design FormAnggotaPerpustakaan
 ![Hasil Design](Tab_Design_Anggota.png)
 
@@ -158,3 +156,108 @@ CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
 +----+--------------------------------------------------------------+------------------+
 
 ##Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
+## Tab Design FormAnggotaPerpustakaan
+![Hasil Design](Tab_Design_Anggota.png)
+
+## Jawaban Eksperimen Praktikum 2
+### Eksperimen:
+### 1.Pada flowPanel, ubah Alignment layout menjadi Center, lalu kecilkan jendela. Apa yang berubah? 
+(Ketika diubah tombol yang ada di dalam flowPanel jadi rata tengah dan ketika jendelanya diperkecil tombol yang tidak muat akan berpindah ke baris berikutnya tetapi tetap di posisi rata tengah.)
+### Baris mana di initComponents() yang ikut berubah? 
+(Yang berubah dalam initComponents() itu pengaturan alignment pada flowPanel yang awalnya FlowLayout.LEFT menjadi FlowLayout.CENTER)
+### 2.Pada gridPanel, ubah Rows menjadi 0 dan Columns menjadi 2. Berapa baris yang terbentuk dan mengapa?
+(Terbentuk jadi 5 baris dan 2 kolom, itu terjadi karena rows nya diganti menjadi 0 dan coloums nya jadi 2, sehingga barisnya otomatis berdasarkan komponen atau tombol yang ada, di dalam gridpanel ada 9 tombol, sehingga terbentuk lah 2 kolom dan 5 baris.)
+### 3.Pada boxPanel, isi properti maximumSize keempat tombol dengan lebar 32767 dan tinggi sama dengan tinggi tombol. Bagaimana lebar tombol berubah? Tambahkan juga Vertical Strut dari kategori Swing Fillers di antara tombol.
+(Setelah properti Maximum Size keempat tombol diatur dengan lebar 32767 dan tinggi sesuai tinggi tombol, lebar tombol dapat menyesuaikan ruang horizontal yang tersedia. Akibatnya, tombol terlihat lebih lebar dan memenuhi area panel. Penambahan Vertical Strut berfungsi memberikan jarak vertikal di antara tombol agar tampilannya lebih rapi dan tidak terlalu berdekatan.)
+
+## Jawaban Eksperimen Praktikum 4
+### Eksperimen:
+### 1.Ubah Weight X pada namaField menjadi 0.0, lalu lebarkan jendela. Apa yang terjadi pada isian?
+(Jika Weight X pada namaField diubah menjadi 0.0, lalu jendela dilebarkan, isian nama tidak ikut melebar untuk mengambil ruang tambahan. Lebar isian cenderung tetap, sedangkan ruang kosong di sebelahnya bertambah.)
+### 2.Ubah Direction formPanel di dalam isiPanel dari North menjadi Center, lalu tinggikan jendela. Apa perbedaannya?
+(Jika Direction formPanel di dalam isiPanel diubah dari North menjadi Center, form berpindah dari bagian atas ke bagian tengah secara vertikal. Saat jendela ditinggikan, form tetap berada di tengah, bukan menempel di atas.)
+### 3.Hapus baris setMinimumSize(getSize()) di konstruktor, lalu kecilkan jendela sekecil mungkin. Bagian mana yang rusak lebih dulu?
+(Jika baris setMinimumSize(getSize()) dihapus, jendela bisa diperkecil lebih jauh dari ukuran awal. Bagian yang kemungkinan rusak lebih dulu adalah susunan form: label dan kolom isian menjadi terlalu sempit, lalu komponen bisa saling berdekatan atau terpotong.)
+
+## Jawaban Tahap 4 Saling Menilai
+## Dinilai oleh Naura Aulia Jahirah
+
+### CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
+
+| No | Pemeriksaan | Ya atau Belum |
+| :---: | :--- | :---: |
+| 1 | Label singkat, jelas, dan sejajar | Ya |
+| 2 | Isian dikelompokkan dengan judul bagian | Ya |
+| 3 | Placeholder dipakai untuk isian yang punya format | Ya |
+| 4 | Komponen sesuai jenis data | Ya |
+| 5 | Tombol utama menonjol dan berada di kanan bawah | Ya |
+| 6 | Jarak antar komponen konsisten | Ya |
+| 7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan | Ya |
+| 8 | Menggunakan JFrame Form dan layout manager, bukan Null atau Absolute Layout | Ya |
+
+### Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
+
+# Praktikum 5 - PBO 2
+## Tabel Pengamatan Praktikum 2
+| No. | Tindakan | Event yang Tercatat |
+|---|---|---|
+| 1 | Arahkan kursor ke tombol, lalu jauhkan. | MouseEvent kursor masuk ke tombol, MouseEvent kursor keluar dari tombol. |
+| 2 | Klik tombol "Klik saya". | ActionEvent tombol diklik. |
+| 3 | Centang lalu hapus centang "Aktifkan fitur". | ItemEvent kotak dicentang, ItemEvent centang dihapus. |
+| 4 | Ganti pilihan dari Pagi menjadi Malam. | ItemEvent memilih Malam. |
+| 5 | Klik isian, lalu ketik kata "abc". | FocusEvent isian mendapat fokus, KeyEvent mengetik huruf a, KeyEvent mengetik huruf b, KeyEvent mengetik huruf c. |
+| 6 | Klik tombol setelah mengetik di isian. | FocusEvent isian kehilangan fokus. |
+
+## Jawaban Eksperimen Praktikum 3
+### Eksperimen:
+### 1. Hapus pemeriksaan if (evt.getStateChange() == ItemEvent.SELECTED) dan tambahkan System.out.println("item berubah"); di dalam event handler. Berapa kali pesan tercetak setiap pilihan diganti?
+(Pesan tercetak 2 kali setiap pilihan di combo box diganti. Ini karena itemStateChanged dipanggil dua kali: sekali untuk pilihan lama yang berubah jadi DESELECTED, dan sekali lagi untuk pilihan baru yang jadi SELECTED. Makanya di kode asli ada if (evt.getStateChange() == ItemEvent.SELECTED) supaya aksinya cuma jalan sekali.)
+
+### 2. Di jendela Properties bagian Events, kosongkan event keyReleased pada celsiusField, lalu buat event keyPressed yang memanggil konversi(). Mengapa hasil yang tampil terlambat satu karakter?
+(Hasilnya terlambat satu karakter karena keyPressed dipicu saat tombol baru ditekan, padahal saat itu karakternya belum masuk ke isian. Jadi getText() di konversi() masih membaca isi yang lama.)
+
+### 3. Hapus blok try dan catch di method konversi, lalu ketik huruf pada isian. Apa yang muncul di jendela Output?
+(Karena Double.parseDouble("abc") gagal, program melempar NumberFormatException dan pesan error (stack trace) muncul di jendela Output, misalnya: Exception in thread "AWT-EventQueue-0" java.lang.NumberFormatException: For input string: "abc"
+Selain itu, label hasil nggak diperbarui dan nggak ada pesan “Masukkan angka yang valid” untuk pengguna. Aplikasinya biasanya tetap jalan, tapi tampilannya jadi nggak informatif. Ini menunjukkan fungsi try-catch buat validasi input dan memberi umpan balik yang jelas ke pengguna.)
+
+## Jawaban Eksperimen Praktikum 4
+### Eksperimen:
+### 1. Buat event actionPerformed untuk kaliButton melalui Events tanpa menghapus lambda di konstruktor, lalu tambahkan System.out.println("kali"); di kedua tempat. Berapa kali pesan tercetak? Mengapa satu tombol sebaiknya hanya memakai satu cara?
+(Pesan tercetak 2 kali setiap tombol diklik, karena ada dua listener yang terdaftar di tombol yang sama: satu dari initComponents() (hasil GUI Builder) dan satu dari lambda di konstruktor. Keduanya sama-sama dipanggil. Kalau nggak cuma println, perhitungannya juga ikut jalan dua kali. Itu sebabnya satu tombol sebaiknya cuma pakai satu cara: biar aksinya nggak dobel, kodenya nggak membingungkan, dan gampang dicari kalau ada bug.)
+
+### 2. Tambahkan tombol % untuk sisa bagi (modulus). Apa saja yang diubah di tab Design dan di tab Source?
+(Yang diubah di tab Design:
+a. Ubah operatorPanel dari Grid 1 baris 4 kolom menjadi 5 kolom.
+b. Tambah Button baru di operatorPanel (misalnya modButton) dengan teks %.
+c. Buat event actionPerformed untuk tombol itu lewat Events.
+Yang diubah di tab Source:
+a. Di event handler modButtonActionPerformed, isi dengan hitung('%');.
+b. Di method hitung, tambahkan case '%' -> a % b; di dalam switch.
+c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || operator == '%') && b == 0), karena modulus dengan nol juga bermasalah.)
+
+### 3. Tekan tombol Hapus. Mengapa kursor langsung berada di isian pertama?
+(Karena di akhir method hapus ada baris angka1Field.requestFocusInWindow();. Baris ini meminta fokus keyboard dipindahkan ke angka1Field, jadi pengguna bisa langsung ngetik angka baru tanpa klik isian dulu. Tanpa baris itu, fokus tetap ada di tombol Hapus.)
+
+## Peta Event pada FormAnggotaPerpustakaan
+
+| No. | Komponen | Menu Events | Aksi |
+|---|---|---|---|
+| 1 | Kotak centang setuju | Item: `itemStateChanged` | Tombol Daftar hanya aktif jika kotak centang dicentang. |
+| 2 | Tombol Batal | Action: `actionPerformed` | Mengosongkan semua isian dan mengembalikan fokus ke NPM. |
+| 3 | Tombol Daftar | Action: `actionPerformed` | Menampilkan ringkasan data menggunakan `JOptionPane`. |
+| 4 | Isian NPM | Key: `keyReleased` | Label kecil menampilkan jumlah digit, misalnya "8 dari 10 digit". |
+| 5 | Form (JFrame di Navigator) | Window: `windowClosing` | Meminta konfirmasi sebelum aplikasi ditutup. |
+
+## Event untuk tombol daftar
+![Hasil Events](Events_daftar.png)
+
+## Layar Dialog Ringkasan
+![Hasil Ringkasan](dialog_ringkasan.png)
+
+## Layar Dialog Konfirmasi Keluar
+![Hasil Keluar](dialog_konfirmasi.png)
+
+
+
+
+
