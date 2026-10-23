@@ -1,8 +1,6 @@
 # pbo2-2410010128
+Repository ini berisi tugas Praktikum Pemrograman Berbasis Objek 2.
 # Praktikum 1 - PBO 2
-
-Repository ini berisi tugas Praktikum 1 Pemrograman Berbasis Objek 2.
-
 ## Hasil Eksekusi Program
 
 ### 1. Program HaloPBO2
@@ -141,8 +139,7 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 (Jika baris setMinimumSize(getSize()) dihapus, jendela bisa diperkecil lebih jauh dari ukuran awal. Bagian yang kemungkinan rusak lebih dulu adalah susunan form: label dan kolom isian menjadi terlalu sempit, lalu komponen bisa saling berdekatan atau terpotong.)
 
 ## Jawaban Tahap 4 Saling Menilai
-## Punya saya dinilai oleh Naura Aulia Jahirah
-
+## Dinilai oleh Naura Aulia Jahirah
 
 ### CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
 
@@ -201,6 +198,24 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 (Karena di akhir method hapus ada baris angka1Field.requestFocusInWindow();. Baris ini meminta fokus keyboard dipindahkan ke angka1Field, jadi pengguna bisa langsung ngetik angka baru tanpa klik isian dulu. Tanpa baris itu, fokus tetap ada di tombol Hapus.)
 
 ## Peta Event pada FormAnggotaPerpustakaan
+
+| No. | Komponen | Menu Events | Aksi |
+|---|---|---|---|
+| 1 | Kotak centang setuju | Item: `itemStateChanged` | Tombol Daftar hanya aktif jika kotak centang dicentang. |
+| 2 | Tombol Batal | Action: `actionPerformed` | Mengosongkan semua isian dan mengembalikan fokus ke NPM. |
+| 3 | Tombol Daftar | Action: `actionPerformed` | Menampilkan ringkasan data menggunakan `JOptionPane`. |
+| 4 | Isian NPM | Key: `keyReleased` | Label kecil menampilkan jumlah digit, misalnya "8 dari 10 digit". |
+| 5 | Form (JFrame di Navigator) | Window: `windowClosing` | Meminta konfirmasi sebelum aplikasi ditutup. |
+
+## Event untuk tombol daftar
+![Hasil Events](Ukuran_lebar.png)
+
+## Layar Dialog Ringkasan
+![Hasil Ringkasan](Ukuran_lebar.png)
+
+## Layar Dialog Konfirmasi Keluar
+![Hasil Keluar](Ukuran_lebar.png)
+
 
 
 
