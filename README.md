@@ -4,7 +4,7 @@ Repository ini berisi tugas Praktikum Pemrograman Berbasis Objek 2.
 ## Hasil Eksekusi Program
 
 ### 1. Program HaloPBO2
-![Hasil HaloPBO2](HaloPBO2.jpeg)
+![Hasil HaloPBO2](Screenshot-p01/HaloPBO2.jpeg)
 
 ### 2. Program KartuMahasiswa
 ![Hasil KartuMahasiswa](KartuMahasiswa.jpeg)
