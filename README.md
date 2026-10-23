@@ -163,12 +163,12 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 ## Tabel Pengamatan Praktikum 2
 | No. | Tindakan | Event yang Tercatat |
 |---|---|---|
-| 1 | Arahkan kursor ke tombol, lalu jauhkan. | MouseEvent |
-| 2 | Klik tombol "Klik saya". | ActionEvent |
-| 3 | Centang lalu hapus centang "Aktifkan fitur". | ItemEvent |
-| 4 | Ganti pilihan dari Pagi menjadi Malam. | ItemEvent |
-| 5 | Klik isian, lalu ketik kata "abc". | KeyEvent |
-| 6 | Klik tombol setelah mengetik di isian. | FocusEvent |
+| 1 | Arahkan kursor ke tombol, lalu jauhkan. | MouseEvent kursor masuk ke tombol, MouseEvent kursor keluar dari tombol. |
+| 2 | Klik tombol "Klik saya". | ActionEvent tombol diklik. |
+| 3 | Centang lalu hapus centang "Aktifkan fitur". | ItemEvent kotak dicentang, ItemEvent centang dihapus. |
+| 4 | Ganti pilihan dari Pagi menjadi Malam. | ItemEvent memilih Malam. |
+| 5 | Klik isian, lalu ketik kata "abc". | FocusEvent isian mendapat fokus, KeyEvent mengetik huruf a, KeyEvent mengetik huruf b, KeyEvent mengetik huruf c. |
+| 6 | Klik tombol setelah mengetik di isian. | FocusEvent isian kehilangan fokus. |
 
 ## Jawaban Eksperimen Praktikum 3
 ### Eksperimen:
@@ -183,6 +183,22 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 Selain itu, label hasil nggak diperbarui dan nggak ada pesan “Masukkan angka yang valid” untuk pengguna. Aplikasinya biasanya tetap jalan, tapi tampilannya jadi nggak informatif. Ini menunjukkan fungsi try-catch buat validasi input dan memberi umpan balik yang jelas ke pengguna.)
 
 ## Jawaban Eksperimen Praktikum 4
+### Eksperimen:
+### 1. Buat event actionPerformed untuk kaliButton melalui Events tanpa menghapus lambda di konstruktor, lalu tambahkan System.out.println("kali"); di kedua tempat. Berapa kali pesan tercetak? Mengapa satu tombol sebaiknya hanya memakai satu cara?
+(Pesan tercetak 2 kali setiap tombol diklik, karena ada dua listener yang terdaftar di tombol yang sama: satu dari initComponents() (hasil GUI Builder) dan satu dari lambda di konstruktor. Keduanya sama-sama dipanggil. Kalau nggak cuma println, perhitungannya juga ikut jalan dua kali. Itu sebabnya satu tombol sebaiknya cuma pakai satu cara: biar aksinya nggak dobel, kodenya nggak membingungkan, dan gampang dicari kalau ada bug.)
+
+### 2. Tambahkan tombol % untuk sisa bagi (modulus). Apa saja yang diubah di tab Design dan di tab Source?
+(Yang diubah di tab Design:
+a. Ubah operatorPanel dari Grid 1 baris 4 kolom menjadi 5 kolom.
+b. Tambah Button baru di operatorPanel (misalnya modButton) dengan teks %.
+c. Buat event actionPerformed untuk tombol itu lewat Events.
+Yang diubah di tab Source:
+a. Di event handler modButtonActionPerformed, isi dengan hitung('%');.
+b. Di method hitung, tambahkan case '%' -> a % b; di dalam switch.
+c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || operator == '%') && b == 0), karena modulus dengan nol juga bermasalah.)
+
+### 3. Tekan tombol Hapus. Mengapa kursor langsung berada di isian pertama?
+(Karena di akhir method hapus ada baris angka1Field.requestFocusInWindow();. Baris ini meminta fokus keyboard dipindahkan ke angka1Field, jadi pengguna bisa langsung ngetik angka baru tanpa klik isian dulu. Tanpa baris itu, fokus tetap ada di tombol Hapus.)
 
 ## Peta Event pada FormAnggotaPerpustakaan
 
