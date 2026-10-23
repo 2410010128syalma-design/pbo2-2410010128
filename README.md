@@ -22,50 +22,49 @@ Repository ini berisi tugas Praktikum 1 Pemrograman Berbasis Objek 2.
 ## Jawaban Singkat Eksperimen
 Eksperimen: lakukan satu per satu, amati hasilnya, lalu kembalikan kode seperti semula.
 
-##1.Tambahkan baris Koleksi x = new Koleksi("X01", "Uji", 2026); di method main. Apa pesan error dari kompiler dan mengapa?
+## 1.Tambahkan baris Koleksi x = new Koleksi("X01", "Uji", 2026); di method main. Apa pesan error dari kompiler dan mengapa?
 (Terdapat juga peringatan/warning tambahan: Variable x is never read karena variabel x tersebut belum digunakan di mana pun). Kenapa itu bisa terjadi karena di baris kode 71, Anda mencoba membuat objek langsung dari kelas Koleksi menggunakan kata kunci new:
 
-##2.Pada kelas Buku, ubah nama method hitungDenda menjadi hitungdenda. Apa yang terjadi jika anotasi @Override ada, dan jika dihapus?
+## 2.Pada kelas Buku, ubah nama method hitungDenda menjadi hitungdenda. Apa yang terjadi jika anotasi @Override ada, dan jika dihapus?
 Jika ada @Override: Akan error. Java bingung karena di kelas induk namanya pakai 'D' besar (hitungDenda), jadi tidak ada method yang cocok untuk ditimpa.
 Jika @Override dihapus: Tetap error. Kelas Buku itu wajib mewarisi dan membuat ulang method hitungDenda (D besar). Kalau pakai 'd' kecil, Java menganggap Anda membuat method baru dan mengabaikan tugas wajibnya.
 
-##3.Tambahkan new Buku("B009", "", 2020, "Anonim"). Apa yang terjadi saat program dijalankan?
+## 3.Tambahkan new Buku("B009", "", 2020, "Anonim"). Apa yang terjadi saat program dijalankan?
 Yang terjadi: Program kemungkinan besar akan error atau berhenti mendadak (crash) saat dijalankan.
 Alasannya: Ada aturan di dalam kode yang melarang judul buku dikosongkan. Karena datanya tidak valid, program menolak membuat buku tersebut.
 
-##4.Ubah private StatusKoleksi status menjadi public, lalu ubah status B002 langsung dari main menjadi TERSEDIA saat masih dipinjam. Aturan apa yang dilanggar?
+## 4.Ubah private StatusKoleksi status menjadi public, lalu ubah status B002 langsung dari main menjadi TERSEDIA saat masih dipinjam. Aturan apa yang dilanggar?
 Aturan yang dilanggar: Enkapsulasi (aturan pelindungan data agar tidak bisa diubah sembarangan dari luar).
 Alasannya: Bikin data kacau. Kalau diubah paksa, sistem akan mengira buku itu "Tersedia" dan bisa dipinjam orang lain lagi, padahal fisiknya masih dibawa oleh si peminjam pertama. Perubahan status harus lewat jalur resmi (method pinjam atau kembalikan).
 
 
-#Praktikum 3 - PBO 2
-##Form Tiket Travel Tema Terang
+# Praktikum 3 - PBO 2
+## Form Tiket Travel Tema Terang
 ![Hasil Tema Terang](Tema_Terang.png)
 
-##Form Tiket Travel Tema Gelap
+## Form Tiket Travel Tema Gelap
 ![Hasil Tema Gelap](Tema_Gelap.png)
 
-##Tab Design Tiket Travel
+## Tab Design Tiket Travel
 ![Hasil Design](Tab_Design.png)
 
-##Jawaban Refleksi
-##1.Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing satu contoh.
-##2.Mengapa kedua JRadioButton perlu diberi properti buttonGroup yang sama?
-##3.Kapan Anda memilih JComboBox dibandingkan JRadioButton?
-##4.Mengapa kode di dalam initComponents() tidak boleh diedit langsung, dan di mana kode tambahan seharusnya ditulis?
-##5.Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat? 
+## Jawaban Refleksi
+## 1.Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing satu contoh.
+## 2.Mengapa kedua JRadioButton perlu diberi properti buttonGroup yang sama?
+## 3.Kapan Anda memilih JComboBox dibandingkan JRadioButton?
+## 4.Mengapa kode di dalam initComponents() tidak boleh diedit langsung, dan di mana kode tambahan seharusnya ditulis?
+## 5.Mengapa FlatLightLaf.setup() harus dipanggil sebelum form dibuat? 
 Jawab :
-##1.Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
-Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
-Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
-##2.Karena JRadioButton digunakan untuk memilih satu pilihan saja dari beberapa pilihan. Dengan memberikan buttonGroup yang sama, ketika satu pilihan dipilih, pilihan lainnya otomatis tidak terpilih. 
-##3.Saya akan memilih JComboBox ketika pilihan yang tersedia cukup banyak, sehingga lebih menghemat tempat pada form. Sedangkan JRadioButton lebih cocok jika pilihannya sedikit dan ingin semua pilihan langsung terlihat.
-##4.Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pada tab Design. Kode tersebut dapat dibuat ulang atau berubah ketika form diedit, sehingga tidak boleh diubah langsung. Kode tambahan seharusnya ditulis di luar blok initComponents(), misalnya di konstruktor setelah initComponents(), pada event handler, atau pada method bantu.
-##5.Karena FlatLightLaf.setup() digunakan untuk mengaktifkan tema tampilan FlatLaf. Perintah ini dipanggil terlebih dahulu sebelum membuat form, agar form yang dibuat langsung menggunakan tampilan FlatLaf. 
+## 1.Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
+## Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
+## Atomic component adalah komponen yang langsung digunakan untuk berinteraksi dengan pengguna. Contohnya JButton.
+## 2.Karena JRadioButton digunakan untuk memilih satu pilihan saja dari beberapa pilihan. Dengan memberikan buttonGroup yang sama, ketika satu pilihan dipilih, pilihan lainnya otomatis tidak terpilih. 
+## 3.Saya akan memilih JComboBox ketika pilihan yang tersedia cukup banyak, sehingga lebih menghemat tempat pada form. Sedangkan JRadioButton lebih cocok jika pilihannya sedikit dan ingin semua pilihan langsung terlihat.
+## 4.Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pada tab Design. Kode tersebut dapat dibuat ulang atau berubah ketika form diedit, sehingga tidak boleh diubah langsung. Kode tambahan seharusnya ditulis di luar blok initComponents(), misalnya di konstruktor setelah initComponents(), pada event handler, atau pada method bantu.
+## 5.Karena FlatLightLaf.setup() digunakan untuk mengaktifkan tema tampilan FlatLaf. Perintah ini dipanggil terlebih dahulu sebelum membuat form, agar form yang dibuat langsung menggunakan tampilan FlatLaf. 
 
-
-#Praktikum 4 - PBO 2
-#Jawaban pertanyaan refleksi pada bagian G
+# Praktikum 4 - PBO 2
+# Jawaban pertanyaan refleksi pada bagian G
 ### 1. Mengapa Null Layout dan Absolute Layout sebaiknya dihindari?
 
 Karena posisi komponen diatur secara manual, sehingga tampilan bisa berantakan ketika ukuran jendela berubah atau dibuka di layar yang berbeda. Lebih baik menggunakan layout manager agar komponen tersusun lebih rapi dan mudah menyesuaikan ukuran jendela.
@@ -87,18 +86,20 @@ Agar susunan form lebih teratur dan mudah diatur. Dengan isiPanel sebagai pembun
 **a. Pengelompokan komponen**
 
 Komponen yang berhubungan diletakkan berdekatan. Contohnya, NPM, nama lengkap, dan program studi dikelompokkan pada bagian Data Anggota, sedangkan email, nomor HP, dan alamat berada pada bagian Kontak.
-![Bukti](Bukti a.png)
+# Bukti a
+![Hasil Bukti](Bukti_a.png)
 
 
 **b. Konsistensi dan kerapian**
 
 Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilihan Mahasiswa, Dosen, dan Umum disusun berdekatan, sedangkan tombol Batal dan Daftar ditempatkan di bagian bawah sebelah kanan.
-![Bukti](Bukti b.png)
+# Bukti b
+![Hasil Bukti](Bukti_b.png)
 
-#Foto Sketsa
+# Foto Sketsa
 ![Hasil Sketsa](Sketsa.png)
 
-#Tabel Rancangan
+# Tabel Rancangan
 ### Tahap 2: Tabel Rancangan
 
 | Bagian | Panel | Layout |
@@ -110,11 +111,11 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 | Pilihan jenis anggota | jenisAnggotaPanel | FlowLayout (LEFT) |
 | Tombol | tombolPanel | FlowLayout (RIGHT) |
 
-#Hasil Form Anggota Perpustakaan
-##Form Ukuran Awal
+# Hasil Form Anggota Perpustakaan
+## Form Ukuran Awal
 ![Hasil Awal](Ukuran_awal.png)
 
-##Form Ukuran Lebar
+## Form Ukuran Lebar
 ![Hasil Lebar](Ukuran_lebar.png)
 
 ##Tab Design FormAnggotaPerpustakaan
