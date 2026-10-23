@@ -7,15 +7,15 @@ Repository ini berisi tugas Praktikum Pemrograman Berbasis Objek 2.
 ![Hasil HaloPBO2](Screenshot-p01/HaloPBO2.jpeg)
 
 ### 2. Program KartuMahasiswa
-![Hasil KartuMahasiswa](KartuMahasiswa.jpeg)
+![Hasil KartuMahasiswa](Screenshot-p01/KartuMahasiswa.jpeg)
 
 ## Riwayat Commit Git
-![Git Log](git%20log%20--oneline.jpeg)
+![Git Log](Screenshot-p01/git%20log%20--oneline.jpeg)
 
 
 # Praktikum 2 - PBO 2
 ## Hasil Run Program Skripsi
-![Hasil Skripsi](Screenshot-p02.jpeg)
+![Hasil Skripsi](Screenshot-p02/Screenshot-p02.jpeg)
 
 ## Jawaban Singkat Eksperimen
 Eksperimen: lakukan satu per satu, amati hasilnya, lalu kembalikan kode seperti semula.
