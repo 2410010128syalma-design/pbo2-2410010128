@@ -38,13 +38,13 @@ Alasannya: Bikin data kacau. Kalau diubah paksa, sistem akan mengira buku itu "T
 
 # Praktikum 3 - PBO 2
 ## Form Tiket Travel Tema Terang
-![Hasil Tema Terang](Tema_Terang.png)
+![Hasil Tema Terang](Screenshot-p03/Tema_Terang.png)
 
 ## Form Tiket Travel Tema Gelap
-![Hasil Tema Gelap](Tema_Gelap.png)
+![Hasil Tema Gelap](Screenshot-p03/Tema_Gelap.png)
 
 ## Tab Design Tiket Travel
-![Hasil Design](Tab_Design.png)
+![Hasil Design](Screenshot-p03/Tab_Design.png)
 
 ## Jawaban Refleksi
 ## 1.Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing satu contoh.
@@ -84,17 +84,17 @@ Agar susunan form lebih teratur dan mudah diatur. Dengan isiPanel sebagai pembun
 
 Komponen yang berhubungan diletakkan berdekatan. Contohnya, NPM, nama lengkap, dan program studi dikelompokkan pada bagian Data Anggota, sedangkan email, nomor HP, dan alamat berada pada bagian Kontak.
 # Bukti a
-![Hasil Bukti](Bukti_a.png)
+![Hasil Bukti](Screenshot-p04/Bukti_a.png)
 
 
 **b. Konsistensi dan kerapian**
 
 Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilihan Mahasiswa, Dosen, dan Umum disusun berdekatan, sedangkan tombol Batal dan Daftar ditempatkan di bagian bawah sebelah kanan.
 # Bukti b
-![Hasil Bukti](Bukti_b.png)
+![Hasil Bukti](Screenshot-p04/Bukti_b.png)
 
 # Foto Sketsa
-![Hasil Sketsa](Sketsa.png)
+![Hasil Sketsa](Screenshot-p04/Sketsa.png)
 
 # Tabel Rancangan
 ### Tahap 2: Tabel Rancangan
@@ -110,14 +110,14 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 
 # Hasil Form Anggota Perpustakaan
 ## Form Ukuran Awal
-![Hasil Awal](Ukuran_awal.png)
+![Hasil Awal](Screenshot-p04/Ukuran_awal.png)
 
 ## Form Ukuran Lebar
-![Hasil Lebar](Ukuran_lebar.png)
+![Hasil Lebar](Screenshot-p04/Ukuran_lebar.png)
 
 
 ##Tab Design FormAnggotaPerpustakaan
-![Hasil Design](Tab_Design_Anggota.png)
+![Hasil Design](Screenshot-p04/Tab_Design_Anggota.png)
 
 ##Jawaban Eksperimen Praktikum 2
 ##Eksperimen:
@@ -157,7 +157,7 @@ CHECKLIST PEMERIKSAAN FORM ANGGOTA PERPUSTAKAAN
 
 ##Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
 ## Tab Design FormAnggotaPerpustakaan
-![Hasil Design](Tab_Design_Anggota.png)
+![Hasil Design](Screenshot-p04/Tab_Design_Anggota.png)
 
 ## Jawaban Eksperimen Praktikum 2
 ### Eksperimen:
