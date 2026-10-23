@@ -208,13 +208,13 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 | 5 | Form (JFrame di Navigator) | Window: `windowClosing` | Meminta konfirmasi sebelum aplikasi ditutup. |
 
 ## Event untuk tombol daftar
-![Hasil Events](Ukuran_lebar.png)
+![Hasil Events](Events_daftar.png)
 
 ## Layar Dialog Ringkasan
-![Hasil Ringkasan](Ukuran_lebar.png)
+![Hasil Ringkasan](dialog_konfirmasi.png)
 
 ## Layar Dialog Konfirmasi Keluar
-![Hasil Keluar](Ukuran_lebar.png)
+![Hasil Keluar](dialog_ringkasan.png)
 
 
 
