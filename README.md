@@ -211,10 +211,10 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ![Hasil Events](Events_daftar.png)
 
 ## Layar Dialog Ringkasan
-![Hasil Ringkasan](dialog_konfirmasi.png)
+![Hasil Ringkasan](dialog_ringkasan.png)
 
 ## Layar Dialog Konfirmasi Keluar
-![Hasil Keluar](dialog_ringkasan.png)
+![Hasil Keluar](dialog_konfirmasi.png)
 
 
 
