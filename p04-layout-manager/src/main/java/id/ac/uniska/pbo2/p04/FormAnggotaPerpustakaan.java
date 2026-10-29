@@ -129,6 +129,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(namaField, gridBagConstraints);
 
+        prodiLabel.setLabelFor(prodiCombo);
         prodiLabel.setText("Program Studi");
         prodiLabel.setName("prodiLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -147,6 +148,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(prodiCombo, gridBagConstraints);
 
+        jenisAnggotaLabel.setLabelFor(jenisAnggotaPanel);
         jenisAnggotaLabel.setText("Jenis Anggota");
         jenisAnggotaLabel.setName("jenisAnggotaLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -190,7 +192,9 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 6, 0);
         formPanel.add(kontakLabel, gridBagConstraints);
 
+        emailLabel.setLabelFor(emailField);
         emailLabel.setText("Email");
+        emailLabel.setToolTipText("");
         emailLabel.setName("emailLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -207,6 +211,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(emailField, gridBagConstraints);
 
+        hpLabel.setLabelFor(hpField);
         hpLabel.setText("Nomor HP");
         hpLabel.setName("hpLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -224,6 +229,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(hpField, gridBagConstraints);
 
+        alamatLabel.setLabelFor(alamatArea);
         alamatLabel.setText("Alamat");
         alamatLabel.setName("alamatLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();

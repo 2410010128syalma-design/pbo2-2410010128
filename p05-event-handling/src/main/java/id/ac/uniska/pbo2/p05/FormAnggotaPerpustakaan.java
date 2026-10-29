@@ -41,8 +41,9 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         isiPanel = new javax.swing.JPanel();
         formPanel = new javax.swing.JPanel();
         dataAnggotaLabel = new javax.swing.JLabel();
-        npmDigitLabel = new javax.swing.JLabel();
+        npmLabel = new javax.swing.JLabel();
         npmField = new javax.swing.JTextField();
+        npmDigitLabel = new javax.swing.JLabel();
         namaLabel = new javax.swing.JLabel();
         namaField = new javax.swing.JTextField();
         prodiLabel = new javax.swing.JLabel();
@@ -100,14 +101,14 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         formPanel.add(dataAnggotaLabel, gridBagConstraints);
 
-        npmDigitLabel.setLabelFor(npmField);
-        npmDigitLabel.setText("NPM");
-        npmDigitLabel.setName("npmDigitLabel"); // NOI18N
+        npmLabel.setLabelFor(npmField);
+        npmLabel.setText("NPM");
+        npmLabel.setName("npmLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        formPanel.add(npmDigitLabel, gridBagConstraints);
+        formPanel.add(npmLabel, gridBagConstraints);
 
         npmField.setName("npmField"); // NOI18N
         npmField.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -122,6 +123,10 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(npmField, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        formPanel.add(npmDigitLabel, gridBagConstraints);
 
         namaLabel.setLabelFor(namaField);
         namaLabel.setText("Nama Lengkap");
@@ -141,6 +146,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(namaField, gridBagConstraints);
 
+        prodiLabel.setLabelFor(prodiCombo);
         prodiLabel.setText("Program Studi");
         prodiLabel.setName("prodiLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -159,6 +165,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(prodiCombo, gridBagConstraints);
 
+        jenisAnggotaLabel.setLabelFor(mahasiswaRadio);
         jenisAnggotaLabel.setText("Jenis Anggota");
         jenisAnggotaLabel.setName("jenisAnggotaLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -202,6 +209,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 6, 0);
         formPanel.add(kontakLabel, gridBagConstraints);
 
+        emailLabel.setLabelFor(emailField);
         emailLabel.setText("Email");
         emailLabel.setName("emailLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -219,6 +227,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(emailField, gridBagConstraints);
 
+        hpLabel.setLabelFor(hpField);
         hpLabel.setText("Nomor HP");
         hpLabel.setName("hpLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -236,6 +245,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(hpField, gridBagConstraints);
 
+        alamatLabel.setLabelFor(alamatArea);
         alamatLabel.setText("Alamat");
         alamatLabel.setName("alamatLabel"); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -394,6 +404,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel namaLabel;
     private javax.swing.JLabel npmDigitLabel;
     private javax.swing.JTextField npmField;
+    private javax.swing.JLabel npmLabel;
     private javax.swing.JCheckBox persetujuanCheck;
     private javax.swing.JComboBox<String> prodiCombo;
     private javax.swing.JLabel prodiLabel;
