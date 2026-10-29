@@ -14,10 +14,10 @@ Repository ini berisi tugas Praktikum Pemrograman Berbasis Objek 2.
 
 
 # Praktikum 2 - PBO 2
-## Hasil Run Program Skripsi
+### 1. Hasil Run Program Skripsi
 ![Hasil Skripsi](Screenshot-p02/Screenshot-p02.jpeg)
 
-## Jawaban Singkat Eksperimen
+### 2. Jawaban Singkat Eksperimen
 Eksperimen: lakukan satu per satu, amati hasilnya, lalu kembalikan kode seperti semula.
 
 ## 1.Tambahkan baris Koleksi x = new Koleksi("X01", "Uji", 2026); di method main. Apa pesan error dari kompiler dan mengapa?
@@ -37,16 +37,16 @@ Alasannya: Bikin data kacau. Kalau diubah paksa, sistem akan mengira buku itu "T
 
 
 # Praktikum 3 - PBO 2
-## Form Tiket Travel Tema Terang
+### 1. Form Tiket Travel Tema Terang
 ![Hasil Tema Terang](Screenshot-p03/Tema_Terang.png)
 
-## Form Tiket Travel Tema Gelap
+### 2. Form Tiket Travel Tema Gelap
 ![Hasil Tema Gelap](Screenshot-p03/Tema_Gelap.png)
 
-## Tab Design Tiket Travel
+### 3. Tab Design Tiket Travel
 ![Hasil Design](Screenshot-p03/Tab_Design.png)
 
-## Jawaban Refleksi
+### 4. Jawaban Refleksi
 ## 1.Apa perbedaan top-level container, intermediate container, dan atomic component? Berikan masing-masing satu contoh.
 Top-level container adalah jendela utama yang menjadi tempat menampilkan aplikasi. Contohnya JFrame.
 Intermediate container adalah wadah yang digunakan untuk mengelompokkan komponen lain. Contohnya JPanel.
@@ -61,7 +61,7 @@ Karena initComponents() dibuat secara otomatis oleh NetBeans dari pengaturan pad
 Karena FlatLightLaf.setup() digunakan untuk mengaktifkan tema tampilan FlatLaf. Perintah ini dipanggil terlebih dahulu sebelum membuat form, agar form yang dibuat langsung menggunakan tampilan FlatLaf. 
 
 # Praktikum 4 - PBO 2
-# Jawaban pertanyaan refleksi pada bagian G
+### Jawaban pertanyaan refleksi pada bagian G
 ### 1. Mengapa Null Layout dan Absolute Layout sebaiknya dihindari?
 
 Karena posisi komponen diatur secara manual, sehingga tampilan bisa berantakan ketika ukuran jendela berubah atau dibuka di layar yang berbeda. Lebih baik menggunakan layout manager agar komponen tersusun lebih rapi dan mudah menyesuaikan ukuran jendela.
@@ -93,10 +93,10 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 # Bukti b
 ![Hasil Bukti](Screenshot-p04/Bukti_b.png)
 
-# Foto Sketsa
+# 1. Foto Sketsa
 ![Hasil Sketsa](Screenshot-p04/Sketsa.png)
 
-# Tabel Rancangan
+# 2. Tabel Rancangan
 ### Tahap 2: Tabel Rancangan
 
 | Bagian | Panel | Layout |
@@ -109,13 +109,13 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 | Tombol | tombolPanel | FlowLayout (RIGHT) |
 
 # Hasil Form Anggota Perpustakaan
-## Form Ukuran Awal
+## 3. Form Ukuran Awal
 ![Hasil Awal](Screenshot-p04/Ukuran_awal.png)
 
-## Form Ukuran Lebar
+## 4. Form Ukuran Lebar
 ![Hasil Lebar](Screenshot-p04/Ukuran_lebar.png)
 
-## Tab Design FormAnggotaPerpustakaan
+## 5. Tab Design FormAnggotaPerpustakaan
 ![Hasil Design](Screenshot-p04/Tab_Design_Anggota.png)
 
 ## Jawaban Eksperimen Praktikum 2
@@ -157,7 +157,7 @@ Komponen disusun menggunakan layout manager agar lebih teratur. Contohnya, pilih
 ### Deklarasi penggunaan AI:Saya menggunakan ChatGpt untuk membantu saya merapikan dan mengatur tampilan form, juga membantu commit ke github.
 
 # Praktikum 5 - PBO 2
-## Tabel Pengamatan Praktikum 2
+## 1. Tabel Pengamatan Praktikum 2
 | No. | Tindakan | Event yang Tercatat |
 |---|---|---|
 | 1 | Arahkan kursor ke tombol, lalu jauhkan. | MouseEvent kursor masuk ke tombol, MouseEvent kursor keluar dari tombol. |
@@ -197,7 +197,7 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ### 3. Tekan tombol Hapus. Mengapa kursor langsung berada di isian pertama?
 (Karena di akhir method hapus ada baris angka1Field.requestFocusInWindow();. Baris ini meminta fokus keyboard dipindahkan ke angka1Field, jadi pengguna bisa langsung ngetik angka baru tanpa klik isian dulu. Tanpa baris itu, fokus tetap ada di tombol Hapus.)
 
-## Peta Event pada FormAnggotaPerpustakaan
+## 2. Peta Event pada FormAnggotaPerpustakaan
 
 | No. | Komponen | Menu Events | Aksi |
 |---|---|---|---|
@@ -207,18 +207,22 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 | 4 | Isian NPM | Key: `keyReleased` | Label kecil menampilkan jumlah digit, misalnya "8 dari 10 digit". |
 | 5 | Form (JFrame di Navigator) | Window: `windowClosing` | Meminta konfirmasi sebelum aplikasi ditutup. |
 
-## Event untuk tombol daftar
+## 3. Event untuk tombol daftar
 ![Hasil Events](Events_daftar.png)
 
-## Layar Dialog Ringkasan
+## 4. Layar Dialog Ringkasan
 ![Hasil Ringkasan](dialog_ringkasan.png)
 
-## Layar Dialog Konfirmasi Keluar
+## 5. Layar Dialog Konfirmasi Keluar
 ![Hasil Keluar](dialog_konfirmasi.png)
 
 # Praktikum 6 - PBO 2
-## Tampilan Layar dengan Pesan Kesalahan
-![Hasil Awal](Screenshot-p06/Form_Kesalahan.png)
+## 1. Tampilan Layar dengan Pesan Kesalahan
+![Hasil_Pesan_Kesalahan l](Screenshot-p06/Form_Kesalahan.png)
+
+## 2. Tampilan Jendela Navigator
+![Hasil Navigator](Screenshot-p06/Menu_Navigator.png)
+
 
 
 
