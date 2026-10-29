@@ -216,6 +216,10 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ## Layar Dialog Konfirmasi Keluar
 ![Hasil Keluar](dialog_konfirmasi.png)
 
+# Praktikum 6 - PBO 2
+## Tampilan Layar dengan Pesan Kesalahan
+![Hasil Awal](Screenshot-p06/Form_Kesalahan.png)
+
 
 
 
