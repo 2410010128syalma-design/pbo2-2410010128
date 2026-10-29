@@ -223,6 +223,20 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ## 2. Tampilan Jendela Navigator
 ![Hasil Navigator](Screenshot-p06/Menu_Navigator.png)
 
+### Eksperimen: 
+### 1. Ketik huruf pada isian NPM. Apa yang terjadi dan baris mana di npmFieldKeyTyped yang menyebabkannya?
+(Saat mengetik huruf pada isian NPM, huruf tidak muncul dan isian tetap kosong. Penyebabnya adalah baris if (!Character.isDigit(evt.getKeyChar()) || penuh) { evt.consume(); } pada npmFieldKeyTyped. Huruf bukan digit, sehingga kondisinya benar dan evt.consume() membatalkan karakter sebelum masuk ke isian. Ini penerapan heuristik pencegahan kesalahan.)
+### 2. Isi email dengan siti@, lalu tekan Tab. Kapan pesan kesalahan muncul? 
+(Pesan kesalahan muncul saat tombol Tab ditekan, yaitu ketika fokus meninggalkan isian email, bukan saat mengetik. Hal ini karena pemeriksaan dilakukan oleh event emailFieldFocusLost yang memanggil periksaEmail(). Isian diberi garis merah dan muncul pesan “Format email belum benar, contoh: nama@contoh.com” di bawahnya.)
+### 3. Klik isian Nama tanpa mengetik, lalu tekan Tab. Mengapa tidak ada pesan kesalahan?
+(Tidak ada pesan kesalahan karena namaFieldFocusLost hanya memanggil periksaNama() jika isian tidak kosong (!namaField.getText().isBlank()). Isian yang hanya dilewati tidak langsung dianggap salah agar pengguna tidak merasa ditegur sebelum sempat mengisi. Isian kosong baru diperiksa saat tombol Daftar diklik.)
+### 4. Centang persetujuan, lalu klik Daftar dengan form kosong. Isian mana yang mendapat fokus?
+(Fokus pindah ke isian NPM. Method daftar() memeriksa semua isian sekaligus dan menyimpan yang salah ke daftar salah berurutan (NPM, Nama, Program studi, Email, Nomor HP). Baris salah.get(0).requestFocusInWindow() memindahkan fokus ke kesalahan pertama, yaitu NPM. Semua isian bertanda merah dan muncul ringkasan “5 isian perlu diperbaiki” di bagian bawah form.)
+### 5. Tekan tombol Alt bersama huruf N. Isian mana yang mendapat fokus, dan properti apa yang mengaturnya?
+(Fokus pindah ke isian Nama lengkap (namaField). Yang mengaturnya adalah properti displayedMnemonic bernilai N pada namaLabel (menentukan huruf pintasan yang bergaris bawah) dan properti labelFor yang menunjuk ke namaField (menentukan komponen yang menerima fokus).)
+### 6. Isi beberapa isian, lalu klik Batal dan pilih No. Apakah data tetap ada?
+(Data tetap ada. Method batal() menampilkan dialog konfirmasi “Data yang sudah diisi akan dihapus. Lanjutkan?” karena adaIsian() bernilai benar. Saat memilih No, jawab bukan YES_OPTION sehingga method berhenti lewat return dan kosongkan() tidak dijalankan. Ini penerapan heuristik kendali dan kebebasan pengguna.)
+
 
 
 
