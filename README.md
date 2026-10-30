@@ -259,6 +259,8 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ### 6. Isi beberapa isian, lalu klik Batal dan pilih No. Apakah data tetap ada?
 (Data tetap ada. Method batal() menampilkan dialog konfirmasi “Data yang sudah diisi akan dihapus. Lanjutkan?” karena adaIsian() bernilai benar. Saat memilih No, jawab bukan YES_OPTION sehingga method berhenti lewat return dan kosongkan() tidak dijalankan. Ini penerapan heuristik kendali dan kebebasan pengguna.)
 
+### Deklarasi penggunaan AI:Saya menggunakan Claude AI untuk membantu mengerjakan langkah praktikum yang kurang saya pahami,dan juga ChtGpt membantu saya menjelaskan jawaban ekperimen dan perbaikan dari hasil temuan teman saya terhadap proyek yang saya buat.
+
 
 
 
