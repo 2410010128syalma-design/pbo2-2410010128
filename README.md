@@ -234,6 +234,8 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 | 10 | Bantuan dan Dokumentasi | Form menyediakan checkbox "Setuju dengan tata tertib perpustakaan" sebagai panduan bagi pengguna sebelum mendaftar. | 0 | Pertahankan checkbox ketentuan tata tertib yang sudah berfungsi dengan baik. |
 
 **Kesimpulan:** Beberapa aspek form sudah berjalan dengan baik, tetapi masih ada kekurangan yang perlu diperbaiki. Prioritas utama adalah pencegahan kesalahan dengan skor 3.
+**Nama peninjau:** Novia Fitri
+**Nama pemilik form:** Nuriatun Syalma
 
 ## 2. Tampilan Layar dengan Pesan Kesalahan
 ![Hasil_Pesan_Kesalahan l](Screenshot-p06/Form_Kesalahan.png)
