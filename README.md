@@ -249,10 +249,8 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 | 4 | Ikon dialog dan penulisan Program Studi belum konsisten. | Menyamakan tampilan dialog dan penulisan Program Studi. | Menyelesaikan P06-Validasi Input |
 | 5 | Terdapat pilihan Program Studi kosong. | Menghapus pilihan kosong dan mempertahankan validasi. | Menyelesaikan P06-Validasi Input |
 | 6 | Format NPM belum dijelaskan sejak awal. | Menambahkan petunjuk bahwa NPM terdiri dari 10 digit. | Menyelesaikan P06-Validasi Input |
-| 7 | Navigasi menggunakan Tab dan Enter sudah berjalan dengan baik. | Mempertahankan fungsi navigasi yang sudah berjalan. | Menyelesaikan P06-Validasi Input |
-| 8 | Jarak label, warna subtitle, dan karakter tambahan perlu diperbaiki. | Merapikan jarak komponen, memperjelas subtitle, dan menghapus karakter tambahan. | Menyelesaikan P06-Validasi Input |
-| 9 | Label pesan kesalahan menampilkan karakter yang tidak diperlukan. | Menghapus teks awal yang tidak diperlukan pada label pesan kesalahan. | Menyelesaikan P06-Validasi Input|
-| 10 | Checkbox aturan sudah berfungsi dengan baik. | Mempertahankan fungsi checkbox. | Menyelesaikan P06-Validasi Input |
+| 7 | Jarak label, warna subtitle, dan karakter tambahan perlu diperbaiki. | Merapikan jarak komponen, memperjelas subtitle, dan menghapus karakter tambahan. | Menyelesaikan P06-Validasi Input |
+| 8 | Label pesan kesalahan menampilkan karakter yang tidak diperlukan. | Menghapus teks awal yang tidak diperlukan pada label pesan kesalahan. | Menyelesaikan P06-Validasi Input|
 
 ### Kesimpulan
 
