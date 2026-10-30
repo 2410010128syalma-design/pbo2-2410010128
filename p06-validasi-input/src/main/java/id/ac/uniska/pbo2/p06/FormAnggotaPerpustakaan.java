@@ -22,16 +22,17 @@ import javax.swing.JTextField;
 public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormAnggotaPerpustakaan.class.getName());
-
+    private java.awt.Component kolomTerakhirAktif;
     /**
      * Creates new form FormAnggotaPerpustakaan
      */
     public FormAnggotaPerpustakaan() {
         initComponents();
+        prodiCombo.removeItem(" ");
         judulLabel.putClientProperty("FlatLaf.styleClass", "h2");
         dataAnggotaLabel.putClientProperty("FlatLaf.styleClass", "h4");
         kontakLabel.putClientProperty("FlatLaf.styleClass", "h4");
-        npmField.putClientProperty("JTextField.placeholderText", "Contoh: 2410010123");
+        npmField.putClientProperty("JTextField.placeholderText", "10 digit angka");
         emailField.putClientProperty("JTextField.placeholderText", "nama@contoh.com");
         hpField.putClientProperty("JTextField.placeholderText", "08xxxxxxxxxx");
 
@@ -46,8 +47,23 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         pack();
         setMinimumSize(getSize());
         setLocationRelativeTo(null);
+        
+        java.awt.Component[] kolomIsian = {
+            npmField, namaField, prodiCombo,
+            emailField, hpField, alamatArea
+        };
+
+        for (java.awt.Component kolom : kolomIsian) {
+            kolom.addFocusListener(new java.awt.event.FocusAdapter() {
+                @Override
+                public void focusGained(java.awt.event.FocusEvent evt) {
+                    kolomTerakhirAktif = kolom;
+                }
+            });
+        }
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -97,6 +113,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         daftarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("Pendaftaran Anggota");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
@@ -175,6 +192,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 0, 5, 5);
         formPanel.add(namaLabel, gridBagConstraints);
 
         namaField.setName("namaField"); // NOI18N
@@ -376,7 +394,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         bawahPanel.setLayout(new java.awt.BorderLayout());
 
         statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        statusLabel.setText("\" \"");
         bawahPanel.add(statusLabel, java.awt.BorderLayout.CENTER);
 
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 8, 0));
@@ -411,18 +428,18 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         daftarButton.setEnabled(setujuCheck.isSelected());
     }//GEN-LAST:event_setujuCheckItemStateChanged
 
-    private void batalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalButtonActionPerformed
+    private void batalButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-        //GEN-FIRST:event_batalButtonActionPerformed
+//GEN-FIRST:event_batalButtonActionPerformed
         batal();
-        //GEN-LAST:event_batalButtonActionPerformed
+                                                   
     }//GEN-LAST:event_batalButtonActionPerformed
 
-    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarButtonActionPerformed
+    private void daftarButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-        //GEN-FIRST:event_daftarButtonActionPerformed
+//GEN-FIRST:event_daftarButtonActionPerformed
         daftar();
-        //GEN-LAST:event_daftarButtonActionPerformed
+                                                    
     }//GEN-LAST:event_daftarButtonActionPerformed
 
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -431,7 +448,8 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
                 this,
                 "Keluar dari aplikasi?",
                 "Konfirmasi",
-                JOptionPane.YES_NO_OPTION
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
         );
         if (jawab == JOptionPane.YES_OPTION) {
             dispose();
@@ -455,50 +473,50 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_hpFieldKeyTyped
 
-    private void npmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_npmFieldFocusLost
+    private void npmFieldFocusLost(java.awt.event.FocusEvent evt) {                                   
         // TODO add your handling code here:
-        //GEN-FIRST:event_npmFieldFocusLost
+//GEN-FIRST:event_npmFieldFocusLost
        // Umpan balik segera, tetapi isian kosong baru diperiksa saat Daftar diklik
         if (!npmField.getText().isBlank()) {
             periksaNpm();
         }
-        //GEN-LAST:event_npmFieldFocusLost
+                                          
     }//GEN-LAST:event_npmFieldFocusLost
 
-    private void namaFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_namaFieldFocusLost
+    private void namaFieldFocusLost(java.awt.event.FocusEvent evt) {                                    
         // TODO add your handling code here:
-        //GEN-FIRST:event_namaFieldFocusLost
+//GEN-FIRST:event_namaFieldFocusLost
         if (!namaField.getText().isBlank()) {
             periksaNama();
         }
-        //GEN-LAST:event_namaFieldFocusLost
+                                           
     }//GEN-LAST:event_namaFieldFocusLost
 
-    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFieldFocusLost
+    private void emailFieldFocusLost(java.awt.event.FocusEvent evt) {                                     
         // TODO add your handling code here:
-        //GEN-FIRST:event_emailFieldFocusLost
+//GEN-FIRST:event_emailFieldFocusLost
         if (!emailField.getText().isBlank()) {
             periksaEmail();
         }
-        //GEN-LAST:event_emailFieldFocusLost
+                                            
     }//GEN-LAST:event_emailFieldFocusLost
 
-    private void hpFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_hpFieldFocusLost
+    private void hpFieldFocusLost(java.awt.event.FocusEvent evt) {                                  
         // TODO add your handling code here:
-        //GEN-FIRST:event_hpFieldFocusLost
+//GEN-FIRST:event_hpFieldFocusLost
         if (!hpField.getText().isBlank()) {
             periksaHp();
         }
-        //GEN-LAST:event_hpFieldFocusLost
+                                         
     }//GEN-LAST:event_hpFieldFocusLost
 
-    private void prodiComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_prodiComboItemStateChanged
+    private void prodiComboItemStateChanged(java.awt.event.ItemEvent evt) {                                            
         // TODO add your handling code here:
-        //GEN-FIRST:event_prodiComboItemStateChanged
+//GEN-FIRST:event_prodiComboItemStateChanged
         if (evt.getStateChange() == ItemEvent.SELECTED) {
             periksaProdi();
         }
-        //GEN-LAST:event_prodiComboItemStateChanged
+                                                   
     }//GEN-LAST:event_prodiComboItemStateChanged
 
     private boolean periksaNpm() {
@@ -569,8 +587,10 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         String pesan = "Pendaftaran berhasil."
                 + "\n\nNPM: " + npmField.getText()
                 + "\nNama: " + namaField.getText().trim()
-                + "\nProgram studi: " + prodiCombo.getSelectedItem()
+                + "\nProgram Studi: " + prodiCombo.getSelectedItem()
                 + "\nJenis anggota: " + jenisAnggota()
+                + "\nEmail: " + emailField.getText().trim()
+                + "\nNomor HP: " + hpField.getText().trim()
                 + "\nAlamat: " + alamatArea.getText();
         JOptionPane.showMessageDialog(this,pesan,"Pendaftaran Berhasil",
             JOptionPane.INFORMATION_MESSAGE);
@@ -587,19 +607,28 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
             return "Mahasiswa";
     }
     
+    
     private void batal() {
-    // Aksi yang menghapus data meminta konfirmasi terlebih dahulu
-        if (adaIsian()) {
-            int jawab = JOptionPane.showConfirmDialog(this,
-                    "Data yang sudah diisi akan dihapus. Lanjutkan?", "Konfirmasi",
-                    JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+    if (adaIsian()) {
+        int jawab = JOptionPane.showConfirmDialog(
+                this,
+                "Data yang sudah diisi akan dihapus. Lanjutkan?",
+                "Konfirmasi",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.WARNING_MESSAGE
+        );
 
-            if (jawab != JOptionPane.YES_OPTION) {
-                return;
+        if (jawab != JOptionPane.YES_OPTION) {
+            if (kolomTerakhirAktif != null) {
+                kolomTerakhirAktif.requestFocusInWindow();
             }
+            return;
         }
-        kosongkan();
     }
+
+    kosongkan();
+}
+
     
     private boolean adaIsian() {
         return !npmField.getText().isBlank() || !namaField.getText().isBlank()
