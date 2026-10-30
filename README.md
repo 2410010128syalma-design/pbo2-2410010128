@@ -239,6 +239,25 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 
 **Nama pemilik form:** Nuriatun Syalma
 
+### Hasil Peer Review dan Perbaikan
+
+| No. | Temuan | Perbaikan | Commit |
+|---|---|---|---|
+| 1 | Email dan nomor HP belum muncul pada ringkasan pendaftaran. | Menambahkan email dan nomor HP ke ringkasan pendaftaran. | Menyelesaikan P06-Validasi Input |
+| 2 | Judul form belum ditampilkan. | Mengatur judul menjadi “Pendaftaran Anggota Perpustakaan”. | Menyelesaikan P06-Validasi Input |
+| 3 | Fokus tidak kembali ke kolom sebelumnya ketika pembatalan tidak jadi. | Mengembalikan fokus ke kolom terakhir yang aktif. | Menyelesaikan P06-Validasi Input |
+| 4 | Ikon dialog dan penulisan Program Studi belum konsisten. | Menyamakan tampilan dialog dan penulisan Program Studi. | Menyelesaikan P06-Validasi Input |
+| 5 | Terdapat pilihan Program Studi kosong. | Menghapus pilihan kosong dan mempertahankan validasi. | Menyelesaikan P06-Validasi Input |
+| 6 | Format NPM belum dijelaskan sejak awal. | Menambahkan petunjuk bahwa NPM terdiri dari 10 digit. | Menyelesaikan P06-Validasi Input |
+| 7 | Navigasi menggunakan Tab dan Enter sudah berjalan dengan baik. | Mempertahankan fungsi navigasi yang sudah berjalan. | Menyelesaikan P06-Validasi Input |
+| 8 | Jarak label, warna subtitle, dan karakter tambahan perlu diperbaiki. | Merapikan jarak komponen, memperjelas subtitle, dan menghapus karakter tambahan. | Menyelesaikan P06-Validasi Input |
+| 9 | Label pesan kesalahan menampilkan karakter yang tidak diperlukan. | Menghapus teks awal yang tidak diperlukan pada label pesan kesalahan. | Menyelesaikan P06-Validasi Input|
+| 10 | Checkbox aturan sudah berfungsi dengan baik. | Mempertahankan fungsi checkbox. | Menyelesaikan P06-Validasi Input |
+
+### Kesimpulan
+
+Berdasarkan hasil peer review, beberapa bagian form perlu diperbaiki agar tampilan lebih rapi, informasi lebih lengkap, dan penggunaan form lebih mudah. Fitur yang sudah berjalan dengan baik tetap dipertahankan.
+
 ## 2. Tampilan Layar dengan Pesan Kesalahan
 ![Hasil_Pesan_Kesalahan l](Screenshot-p06/Form_Kesalahan.png)
 
