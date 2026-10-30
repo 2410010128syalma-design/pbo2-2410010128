@@ -217,10 +217,28 @@ c. Sebaiknya perluas pemeriksaan pembagian nol, jadi if ((operator == '/' || ope
 ![Hasil Keluar](dialog_konfirmasi.png)
 
 # Praktikum 6 - PBO 2
-## 1. Tampilan Layar dengan Pesan Kesalahan
+## 1. Lembar Peer Review
+## Lembar Evaluasi Heuristik Form Anggota Perpustakaan
+
+| No. | Heuristik | Temuan | Skor 0-4 | Saran |
+|---|---|---|---|---|
+| 1 | Visibilitas Status Sistem | Saat tombol "Daftar" diklik, muncul dialog "Pendaftaran berhasil" sehingga pengguna tahu data masuk. Namun, Email dan Nomor HP tidak tercetak di ringkasan data. | 1 | Tambahkan Email dan Nomor HP ke ringkasan sukses agar pengguna bisa mengecek ulang data. |
+| 2 | Kesesuaian dengan Dunia Nyata | Judul di bagian atas jendela form masih kosong sehingga pengguna tidak langsung mengetahui aplikasi yang sedang dibuka. | 1 | Beri judul jendela yang jelas, misalnya "Pendaftaran Anggota Perpustakaan". |
+| 3 | Kendali dan Kebebasan Pengguna | Setelah memilih "No" pada dialog konfirmasi Batal, fokus kursor tidak otomatis kembali ke kolom isian. | 2 | Kembalikan fokus kursor ke kolom terakhir menggunakan `requestFocusInWindow()`. |
+| 4 | Konsistensi dan Standar | Ikon pada dialog konfirmasi berbeda meskipun judulnya sama. Penulisan label "Program Studi" juga berbeda antara form dan ringkasan sukses. | 1 | Samakan ikon dialog sejenis dan konsistenkan penulisan label. |
+| 5 | Pencegahan Kesalahan | Terdapat pilihan kosong pada ComboBox Program Studi, tetapi form tetap bisa diproses meskipun program studi belum diisi. | 3 | Hapus pilihan kosong dan tambahkan validasi agar data tidak bisa diproses jika program studi belum dipilih. |
+| 6 | Mengenali, Bukan Mengingat | Petunjuk format seperti "NPM harus berisi 10 digit angka" baru muncul setelah pengguna melakukan kesalahan. | 1 | Tambahkan petunjuk format sejak awal melalui placeholder atau teks di bawah kolom. |
+| 7 | Fleksibilitas dan Efisiensi Penggunaan | Navigasi menggunakan Tab dan tombol Enter untuk mengirim data sudah berfungsi dengan baik. | 0 | Pertahankan fungsi navigasi keyboard yang sudah nyaman digunakan. |
+| 8 | Desain Estetis dan Minimalis | Tampilan form sudah bersih, tetapi jarak label "Nama Lengkap" terlalu dekat dengan kotak input, teks subjudul terlalu pucat, dan terdapat sisa tanda petik di pojok kiri bawah. | 2 | Perbaiki jarak antarkomponen, gelapkan warna subjudul, dan hapus karakter yang tidak diperlukan. |
+| 9 | Membantu Memperbaiki Kesalahan | Label penampung pesan error di pojok kiri bawah masih menampilkan tanda petik ganda sehingga terlihat seperti karakter sisa. | 1 | Kosongkan teks pada label tersebut atau hapus karakter yang tidak diperlukan. |
+| 10 | Bantuan dan Dokumentasi | Form menyediakan checkbox "Setuju dengan tata tertib perpustakaan" sebagai panduan bagi pengguna sebelum mendaftar. | 0 | Pertahankan checkbox ketentuan tata tertib yang sudah berfungsi dengan baik. |
+
+**Kesimpulan:** Beberapa aspek form sudah berjalan dengan baik, tetapi masih ada kekurangan yang perlu diperbaiki. Prioritas utama adalah pencegahan kesalahan dengan skor 3.
+
+## 2. Tampilan Layar dengan Pesan Kesalahan
 ![Hasil_Pesan_Kesalahan l](Screenshot-p06/Form_Kesalahan.png)
 
-## 2. Tampilan Jendela Navigator
+## 3. Tampilan Jendela Navigator
 ![Hasil Navigator](Screenshot-p06/Menu_Navigator.png)
 
 ### Eksperimen: 
