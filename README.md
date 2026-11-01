@@ -279,6 +279,32 @@ Berdasarkan hasil peer review, beberapa bagian form perlu diperbaiki agar tampil
 ### Deklarasi penggunaan AI:Saya menggunakan Claude AI untuk membantu mengerjakan langkah praktikum yang kurang saya pahami,dan juga ChtGpt membantu saya menjelaskan jawaban ekperimen dan perbaikan dari hasil temuan teman saya terhadap proyek yang saya buat.
 
 
+# Praktikum 7 - PBO 2
+## Jawaban Eksperimen praktikum 5 pada p07-tabel-dan-menu
+
+## 1. Di KontakTableModel, jadikan baris fireTableRowsInserted(baris, baris); sebagai komentar, lalu tambah kontak baru. Apakah tabel langsung berubah?
+(Setelah baris fireTableRowsInserted(baris, baris); dijadikan komentar, kontak baru yang disimpan lewat dialog tidak langsung muncul di tabel. Data sebenarnya sudah masuk ke List daftar, tetapi tabel tidak diberi tahu bahwa ada baris baru sehingga tidak menggambar ulang. Tabel baru menampilkan data tersebut setelah tampilannya dipicu ulang, misalnya saat kata di kolom cari diubah, judul kolom diklik untuk mengurutkan, atau jendela diubah ukurannya. Label status juga bisa menunjukkan jumlah yang tidak sama dengan isi tabel. Ini membuktikan bahwa JTable tidak menyimpan data dan hanya menggambar ulang ketika model memanggil method fireTable....)
+
+## 2. Di method barisTerpilih, ganti isinya menjadi return kontakTable.getSelectedRow();. Cari kata "ah", pilih Ahmad Fauzi, lalu klik Hapus dan pilih No. Nama siapa yang muncul di dialog konfirmasi?
+(Setelah barisTerpilih() diganti menjadi return kontakTable.getSelectedRow();, pencarian “ah” menampilkan tiga baris: Siti Rahmah (baris tampilan 0), Ahmad Fauzi (baris tampilan 1), dan Nur Aisyah (baris tampilan 2). Saat Ahmad Fauzi dipilih lalu tombol Hapus diklik, dialog konfirmasi menampilkan nama Budi Santoso, bukan Ahmad Fauzi. Penyebabnya, nomor baris tampilan 1 dipakai langsung sebagai nomor baris model, padahal baris model nomor 1 adalah Budi Santoso (urutan model: Siti Rahmah 0, Budi Santoso 1, Ahmad Fauzi 2, Nur Aisyah 3, Rizky Pratama 4). Karena dipilih No, tidak ada data yang terhapus, tetapi jika dipilih Yes, kontak yang salah akan terhapus. Karena itu nomor baris tampilan harus diubah dengan convertRowIndexToModel.)
+
+## 3. Di konstruktor DialogKontak, ubah super(pemilik, judul, true) menjadi false. Saat dialog terbuka, coba klik jendela utama. Apa yang terjadi pada kontak yang ditambahkan?
+(Setelah super(pemilik, judul, true) diubah menjadi false, dialog tidak lagi modal. Jendela utama tetap bisa diklik saat dialog terbuka. Selain itu, setVisible(true) tidak lagi menunggu dialog ditutup, sehingga tampilkan() langsung mengembalikan hasil yang masih null. Akibatnya kontak yang diisi di dialog tidak pernah ditambahkan ke tabel, karena kondisi baru != null bernilai salah. Dialog dibuat modal agar hasil isian dapat langsung dibaca pada baris berikutnya setelah dialog ditutup.)
+
+## 4. Tekan Ctrl+N, Ctrl+E, dan Ctrl+D. Mengapa Ctrl+E dan Ctrl+D tidak bekerja saat tidak ada baris yang dipilih?
+(Ctrl+N (Tambah) selalu bekerja dan membuka dialog Tambah Kontak. Ctrl+E (Ubah) dan Ctrl+D (Hapus) tidak bekerja saat tidak ada baris yang dipilih, karena method perbaruiTombol() menonaktifkan ubahItem dan hapusItem (setEnabled(false)) ketika getSelectedRow() bernilai kurang dari 0. Item menu yang nonaktif tidak merespons pintasan keyboard-nya. Setelah satu baris dipilih, kedua item menjadi aktif dan Ctrl+E serta Ctrl+D berfungsi.)
+
+## 5. Di tab Design, ubah accelerator hapusItem menjadi tombol Delete tanpa Ctrl. Baris apa yang berubah di initComponents()?
+(Setelah accelerator hapusItem diubah menjadi tombol Delete tanpa Ctrl, baris hapusItem.setAccelerator(...) di initComponents() berubah. Sebelumnya berisi javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK). Sesudahnya menjadi javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_DELETE, 0). Jadi VK_D berganti menjadi VK_DELETE, dan CTRL_DOWN_MASK berganti menjadi 0 karena tidak ada tombol pengubah.)
+
+## 6. Ubah deklarasi atribut menjadi private KontakTableModel model; lalu isi model = new KontakTableModel(); setelah initComponents(). Jalankan. Pesan error apa yang muncul dan mengapa?
+(Setelah deklarasi diubah menjadi private KontakTableModel model; dan model = new KontakTableModel(); ditulis setelah initComponents(), program gagal dijalankan dengan NullPointerException. Penyebabnya, initComponents() dipanggil lebih dulu dan menjalankan kontakTable.setModel(model); saat model masih null. Pembuatan sorter (new TableRowSorter<>(model)) yang memakai model sebelum diisi juga bermasalah. Karena itu atribut model harus sudah dibuat saat dideklarasikan, sebelum initComponents() dipanggil.)
+
+## Tautan Vidio demo mini proyek
+https://drive.google.com/file/d/1nv9l0QB5uoGixfrOkUG1Z7o2_eKIDt1Z/view?usp=sharing
+
+## Deklarasi Penggunaan AI : saya menggunakan Claude untuk membantu mengerjakan mini proyek, dan chtpgt untuk membantu mengerjakan eksperimen.
+
 
 
 
