@@ -4,6 +4,7 @@
  */
 package id.ac.uniska.pbo2.p07;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
@@ -213,6 +214,7 @@ public class KatalogBuku extends javax.swing.JFrame {
             sorter.setRowFilter(RowFilter.regexFilter("(?i)" + Pattern.quote(kata), 0, 1, 2));
         }
         perbaruiStatus();
+        
     }
 
     private int barisTerpilih() {
@@ -291,6 +293,7 @@ public class KatalogBuku extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        FlatLightLaf.setup();
         java.awt.EventQueue.invokeLater(() -> new KatalogBuku().setVisible(true));
     }
 
