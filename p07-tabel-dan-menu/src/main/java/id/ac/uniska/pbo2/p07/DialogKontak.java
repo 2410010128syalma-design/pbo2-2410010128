@@ -70,6 +70,7 @@ public class DialogKontak extends javax.swing.JDialog {
         simpanButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Dialog Kontak");
         setResizable(false);
 
         formPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
@@ -128,18 +129,18 @@ public class DialogKontak extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void batalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalButtonActionPerformed
+    private void batalButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         // TODO add your handling code here:
-        //GEN-FIRST:event_batalButtonActionPerformed
+//GEN-FIRST:event_batalButtonActionPerformed
         dispose();
-        //GEN-LAST:event_batalButtonActionPerformed
+                                                   
     }//GEN-LAST:event_batalButtonActionPerformed
 
-    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-        //GEN-FIRST:event_simpanButtonActionPerformed
+//GEN-FIRST:event_simpanButtonActionPerformed
         simpan();
-        //GEN-LAST:event_simpanButtonActionPerformed
+                                                    
     }//GEN-LAST:event_simpanButtonActionPerformed
 
     private void simpan() {

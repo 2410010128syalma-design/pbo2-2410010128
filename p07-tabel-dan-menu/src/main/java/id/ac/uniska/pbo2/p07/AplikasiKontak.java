@@ -4,6 +4,7 @@
  */
 package id.ac.uniska.pbo2.p07;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
@@ -345,6 +346,7 @@ public class AplikasiKontak extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        FlatLightLaf.setup();
         java.awt.EventQueue.invokeLater(() -> new AplikasiKontak().setVisible(true));
     }
 
